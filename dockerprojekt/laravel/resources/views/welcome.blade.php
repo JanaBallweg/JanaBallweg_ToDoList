@@ -14,7 +14,7 @@
         <div class="container">
         <div class ="content">
         <h1>Meine To-Do-Liste</h1>
-                <form> 
+                <form method= "" action="POST"> 
                 <div class="form-group">
                 <label for="text">Trage eine neue Aufgabe ein:</label>
                 <input type="text" class="form-control" id="Aufgabe" placeholder="Aufgabe" name="Aufgabe">
@@ -24,30 +24,28 @@
             </form>
 
                 <h2>Meine Aufgaben</h2>
-                <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+                <p>Im folgenden können wichtige Aufgaben eingetragen und verwaltet werden:</p>            
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
+                        <th>Aufgabe</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
+                        <td>Einkaufen</td>
+                        <td><a href="">Delete Task</a></td>
                     </tr>
                     <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
+                        <td>Putzen</td>
+                        <td><a href="">Delete Task</a></td>
+                     
                     </tr>
                     <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
+                        <td>Kochen</td>
+                        <td><a href="">Delete Task</a></td>
+                     
                     </tr>
                     </tbody>
                 </table>
@@ -55,4 +53,7 @@
 
             </div>
     </body>
+
+    </style>
+<body style="background-image: url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80;">
 </html>
