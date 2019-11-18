@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <title>Hallo Jana!</title>
+        <title>To-Do-Liste!</title>
         </head>
 
 
@@ -14,17 +14,18 @@
         <div class="container">
         <div class ="content">
         <h1>Meine To-Do-Liste</h1>
-                <form method= "" action="POST"> 
+                <form action="{{ route('createTask')}}" method= "POST"> 
                 <div class="form-group">
                 <label for="text">Trage eine neue Aufgabe ein:</label>
-                <input type="text" class="form-control" id="Aufgabe" placeholder="Aufgabe" name="Aufgabe">
+                <input type="text" class="form-control" id="task" placeholder="task" name="task">
                 </div>
                
-                <button type="submit" class="btn btn-danger">Submit</button>
+                <button type="submit" class="btn btn-success">Hinzufügen</button>
+                <input type="hidden" value="{{ Session::token() }}" name="_token"></input>
             </form>
 
                 <h2>Meine Aufgaben</h2>
-                <p>Im folgenden können wichtige Aufgaben eingetragen und verwaltet werden:</p>            
+                <p>Im folgenden können wichtige Aufgaben eingetragen werden:</p>            
                 <table class="table">
                     <thead>
                     <tr>
@@ -33,20 +34,13 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach ($tasks as $task)
                     <tr>
-                        <td>Einkaufen</td>
-                        <td><a href="">Delete Task</a></td>
+                        <td>{{$task->note }}</td>
+                    
+                        <td><button type="delete" class="btn btn-danger"> <a href="{{route('deleteTask',['task_id' => $task ->id]) }} ">Delete Task</a></td>
                     </tr>
-                    <tr>
-                        <td>Putzen</td>
-                        <td><a href="">Delete Task</a></td>
-                     
-                    </tr>
-                    <tr>
-                        <td>Kochen</td>
-                        <td><a href="">Delete Task</a></td>
-                     
-                    </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
