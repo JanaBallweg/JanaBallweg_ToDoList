@@ -43,8 +43,10 @@
                     @foreach ($tasks as $task)
                     <tr>
                         <td>{{$task->note }}</td>
+
+                        <td> <button type="edit" class="btn btn-warning"> <a href="{{route('editTask',['task_id' => $task ->id]) }} " method='POST'>Bearbeiten</a></td>
                     
-                        <td><button type="delete" class="btn btn-danger"> <a href="{{route('deleteTask',['task_id' => $task ->id]) }} ">Delete Task</a></td>
+                        <td><button type="delete" class="btn btn-danger"> <a href="{{route('deleteTask',['task_id' => $task ->id]) }} ">Entfernen</a></td>
                     </tr>
                     @endforeach
                     </tbody>

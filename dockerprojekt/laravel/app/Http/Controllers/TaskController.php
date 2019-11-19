@@ -65,8 +65,11 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {   
+
+        $task= Task::find($id);
+        return view('tasks.edit')->with('taskUnderEdit', $task);
+       
     }
 
     /**
@@ -78,7 +81,11 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $task= Task::find($id);
+        $task->note = $request->updatedTaskName;
+        $task->save();
+
+        return redirect()->back();
     }
 
     /**

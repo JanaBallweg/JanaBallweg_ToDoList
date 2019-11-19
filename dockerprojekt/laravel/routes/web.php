@@ -11,6 +11,17 @@ Route::get('/deleteTask/{task_id}', [
     'uses' => 'TaskController@destroy',
     'as' => 'deleteTask',
     ]);
+
+    Route::get('/editTask/{task_id}', [
+        'uses' => 'TaskController@edit',
+        'as' => 'editTask',
+        ]);
+
+        Route::post('/updateTask/{task_id}', [
+            'uses' => 'TaskController@update',
+            'as' => 'updateTask',
+            ]);
+        
     
 
 Auth::routes(['register' => false]);
