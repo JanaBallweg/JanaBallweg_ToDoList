@@ -1,3 +1,7 @@
+
+ @extends('layouts.app')
+
+ @section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -6,11 +10,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
         <title>To-Do-Liste!</title>
         </head>
 
 
         <body>
+       
         <div class="container">
         <div class ="content">
         <h1>Meine To-Do-Liste</h1>
@@ -51,3 +57,4 @@
     </style>
 <body style="background-image: url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80;">
 </html>
+@endsection

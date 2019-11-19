@@ -1,11 +1,6 @@
 <?php
 
-
-/*Route::get('/', function () {
-    return view('welcome', 'TaskController@index');
-});*/
-
-Route::get('/', 'TaskController@index');
+Route::get('/', 'TaskController@index')->middleware(['auth', 'password.confirm']);
 
 Route::post('/createTask', [
 'uses' => 'TaskController@store',
@@ -17,3 +12,8 @@ Route::get('/deleteTask/{task_id}', [
     'as' => 'deleteTask',
     ]);
     
+
+Auth::routes(['register' => false]);
+
+
+Route::get('/home', 'HomeController@index')->name('home');
