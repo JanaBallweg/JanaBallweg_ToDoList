@@ -34,8 +34,8 @@
     </div>
 
     <div class="form-group">
-    <input type ="submit" value='Save Changes' class='btn btn-success'>
-    <a href="http://localhost:8080/"class='btn btn-danger pull-right'>Go Back</a>
+    <input type ="submit" value='Änderungen speichern' class='btn btn-success'>
+    <a href="http://localhost:8080/"class='btn btn-danger pull-right'>Zurück</a>
     </div>
     </form>
     </div>

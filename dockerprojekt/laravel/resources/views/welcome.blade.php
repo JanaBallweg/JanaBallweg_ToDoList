@@ -23,7 +23,7 @@
                 <form action="{{ route('createTask')}}" method= "POST"> 
                 <div class="form-group">
                 <label for="text">Trage eine neue Aufgabe ein:</label>
-                <input type="text" class="form-control" id="task" placeholder="task" name="task">
+                <input type="text" class="form-control" id="task" placeholder="Aufgabe" name="task">
                 </div>
                
                 <button type="submit" class="btn btn-success">Hinzufügen</button>
@@ -31,7 +31,7 @@
             </form>
 
                 <h2>Meine Aufgaben</h2>
-                <p>Im folgenden können wichtige Aufgaben eingetragen werden:</p>            
+                        
                 <table class="table">
                     <thead>
                     <tr>
